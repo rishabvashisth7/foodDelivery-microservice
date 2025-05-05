@@ -1,0 +1,5 @@
+package com.example.restaurant.restaurant_service.repository;
+
+public class RestaurantRepository {
+
+}
