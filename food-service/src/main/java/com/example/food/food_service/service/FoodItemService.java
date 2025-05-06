@@ -13,6 +13,8 @@ import com.example.food.food_service.entity.FoodCategory;
 import com.example.food.food_service.entity.FoodItem;
 import com.example.food.food_service.repository.FoodCategoryRepo;
 import com.example.food.food_service.repository.FoodItemRepo;
+import com.example.food.food_service.service.external.RestWebClientService;
+import com.example.food.food_service.service.external.RestaurantService;
 
 import java.util.List;
 import java.util.UUID;
@@ -29,11 +31,14 @@ public class FoodItemService {
 //    @Autowired
 //    private RestTemplate restTemplate;
     
-    @Autowired
-    private RestaurantService restaurantService;
+//    @Autowired
+//    private RestaurantService restaurantService;
     
     @Autowired
     private WebClient webClient;
+
+    @Autowired
+    private RestWebClientService restWebClientService;
 
     public List<FoodItemDTO> getAllFoodItems() {
         return foodItemRepository.findAll().stream()
@@ -53,11 +58,13 @@ public class FoodItemService {
 //        RestaurantDto restaurantDto= restaurantService.getRestaurantById(foodItem.getRestaurantId());
 
         
-        RestaurantDto restaurantDto = webClient.get()
-        		 .uri("/api/v1/restaurants/{id}",foodItem.getRestaurantId())
-        		 .retrieve()
-        		 .bodyToMono(RestaurantDto.class)
-        		 .block();
+//        RestaurantDto restaurantDto = webClient.get()
+//        		 .uri("/api/v1/restaurants/{id}",foodItem.getRestaurantId())
+//        		 .retrieve()
+//        		 .bodyToMono(RestaurantDto.class)
+//        		 .block();
+        
+        RestaurantDto restaurantDto = restWebClientService.getById(foodItem.getRestaurantId());
         
         FoodItemDTO foodItemDTO = convertToDTO(foodItem);
         foodItemDTO.setRestaurant(restaurantDto);
