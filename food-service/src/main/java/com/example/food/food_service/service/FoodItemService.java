@@ -4,6 +4,7 @@ package com.example.food.food_service.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 
 import com.example.food.food_service.dto.FoodCategoryDTO;
 import com.example.food.food_service.dto.FoodItemDTO;
@@ -30,6 +31,9 @@ public class FoodItemService {
     
     @Autowired
     private RestaurantService restaurantService;
+    
+    @Autowired
+    private WebClient webClient;
 
     public List<FoodItemDTO> getAllFoodItems() {
         return foodItemRepository.findAll().stream()
@@ -46,8 +50,15 @@ public class FoodItemService {
 //        RestaurantDto restaurantDto =  restTemplate.getForObject(restautantServiceUrl, RestaurantDto.class);
 
         //call using feign client
-        RestaurantDto restaurantDto= restaurantService.getRestaurantById(foodItem.getRestaurantId());
+//        RestaurantDto restaurantDto= restaurantService.getRestaurantById(foodItem.getRestaurantId());
 
+        
+        RestaurantDto restaurantDto = webClient.get()
+        		 .uri("/api/v1/restaurants/{id}",foodItem.getRestaurantId())
+        		 .retrieve()
+        		 .bodyToMono(RestaurantDto.class)
+        		 .block();
+        
         FoodItemDTO foodItemDTO = convertToDTO(foodItem);
         foodItemDTO.setRestaurant(restaurantDto);
         return foodItemDTO;
