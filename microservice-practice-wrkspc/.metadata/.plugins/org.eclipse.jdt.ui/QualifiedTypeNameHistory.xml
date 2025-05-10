@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.example.restaurant.restaurant_service.service.RestaurantService"/>
+    <fullyQualifiedTypeName name="com.example.food.food_service.repository.FoodItemRepo"/>
+    <fullyQualifiedTypeName name="com.example.food.food_service.repository.FoodCategoryRepo"/>
+    <fullyQualifiedTypeName name="com.example.food.food_service.dto.FoodItemDTO"/>
+    <fullyQualifiedTypeName name="com.example.food.food_service.entity.FoodItem"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.FeignClient"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.example.food.food_service.service.RestaurantService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.reactive.function.client.WebClient"/>
+    <fullyQualifiedTypeName name="com.example.food.food_service.dto.FoodCategoryDTO"/>
+    <fullyQualifiedTypeName name="com.example.food.food_service.dto.RestaurantDto"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.example.food.food_service.service.external.RestWebClientService"/>
 </qualifiedTypeNameHistroy>
