@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.example.food.food_service.dto.RestaurantDto;
 
-@FeignClient(name="restaurant-service",url="http://localhost:9091")
+//@FeignClient(name="restaurant-service",url="lb://restaurant-service")
+@FeignClient(name = "restaurant-service")
 public interface RestaurantService {
 
 	@GetMapping("/api/v1/restaurants/{id}")

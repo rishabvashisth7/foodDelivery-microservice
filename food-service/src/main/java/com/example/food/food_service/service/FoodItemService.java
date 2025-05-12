@@ -31,11 +31,11 @@ public class FoodItemService {
 //    @Autowired
 //    private RestTemplate restTemplate;
     
-//    @Autowired
-//    private RestaurantService restaurantService;
-    
     @Autowired
-    private WebClient webClient;
+    private RestaurantService restaurantService;
+    
+//    @Autowired
+//    private WebClient webClient;
 
     @Autowired
     private RestWebClientService restWebClientService;
