@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: "https://github.com/rishabvashisth7/foodDelivery-microservice/tree/main/configuration-microservice.git"
+          uri: "https://github.com/rishabvashisth7/configuration-microservices.git"
           default-label: main
           timeout: 5
           clone-on-start: true
@@ -29,3 +29,6 @@ management:
         include: "*"
 server:
   port: 9096
+
+encrypt:
+  key: "ndjsndkdwowjnrnkenofeo033n3k4n5nkkq110ndnr"
