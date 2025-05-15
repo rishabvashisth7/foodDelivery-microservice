@@ -1,5 +1,7 @@
 spring:
   application:
     name: "food-service"
+  profiles:
+    active: prod
   config:
     import: "configserver:http://localhost:9096"
