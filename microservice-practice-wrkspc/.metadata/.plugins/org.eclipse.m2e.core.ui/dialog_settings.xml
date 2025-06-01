@@ -2,13 +2,15 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\SpringBoot\microservice-implementation\payment-service"/>
+			<item value="D:\SpringBoot\microservice-implementation\cart-service"/>
+			<item value="D:\SpringBoot\microservice-implementation\orders-service"/>
 			<item value="D:\SpringBoot\microservice-implementation\config-server"/>
 			<item value="D:\SpringBoot\microservice-implementation\api-gateway"/>
 			<item value="D:\SpringBoot\microservice-implementation\service-registry"/>
 			<item value="D:\SpringBoot\microservice-implementation\restaurant-service"/>
 			<item value="D:\SpringBoot\microservice-implementation\user-service"/>
 			<item value="D:\SpringBoot\microservice-implementation\food-service"/>
-			<item value="D:\SpringBoot\microservice-implementation\payment-service"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

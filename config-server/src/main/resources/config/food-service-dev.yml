@@ -3,6 +3,6 @@ server:
 
 info:
   app:
-    name: "Food Service"
+    name: "Food Service-->"
     description: "This is Food Service. We are developing right now"
     version: "1.0 Under Development"

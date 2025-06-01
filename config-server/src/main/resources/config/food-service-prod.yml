@@ -3,6 +3,6 @@ server:
 
 info:
   app:
-    name: "Food Service"
-    description: "This is Food Service production. Ready to serve users."
-    version: "1.0 Production"
+    name: "Food Service---> after new changes"
+    description: "This is new changed--> bus refeshed Food Service production. Ready to serve users."
+    version: "2.0==>Production-->newwet" 
